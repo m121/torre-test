@@ -1,0 +1,10 @@
+{
+  "name": "torreexample",
+  "version": "1.0.0",
+  "description": "torre test",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "4.4.1"
+  }
+}
