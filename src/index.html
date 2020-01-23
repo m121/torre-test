@@ -9,9 +9,9 @@
 </head>
 <body>
     <!-- navbar-->
-    <ul class="nav justify-content-end">
+    <ul class="nav justify-content-end navbar navbar-dark bg-dark">
         <li class="nav-item">
-          <a class="nav-link" href="#">My profile</a>
+          <a class="nav-link" href="profile.html/?id=mateo">My profile</a>
         </li>
        
       </ul>
@@ -21,12 +21,25 @@
       
         <div class="container">
           <h1 class="display-4">Faster remote job seeker</h1>
-          <p class="lead">Select your filters.</p>
+          <h3>Do you want to work for a Startup?</h3>
+          <p class="lead">Search easily.</p>
          
       <div class="container">
         <form class="form-inline " onsubmit="return searchFor(this)">
-          <input class="form-control mr-sm-2" type="search" id="searchfor" placeholder="Search for your skill here" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0"   type="submit">Search</button>
+          <div class="form-group">
+          <input class="form-control mr-sm-2" type="search" id="searchfor" placeholder="Search for job title or company name here" aria-label="Search">
+          </div>
+          <div class="form-group">
+            <label class=" mr-sm-2" >Number of results</label>
+            <select class="form-control mr-sm-2" id="size">
+              <option>10</option>
+              <option>20</option>
+              <option>30</option>
+              <option>40</option>
+              <option>50</option>
+            </select>
+          </div>
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
       </div>
         </div>
