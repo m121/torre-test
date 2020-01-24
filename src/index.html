@@ -1,37 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Remote work seeker!!</title>
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-</head>
-<body>
-    <!-- navbar-->
-    <ul class="nav justify-content-end navbar navbar-dark bg-dark">
-        <li class="nav-item">
-          <a class="nav-link" href="profile.html/?id=mateo">My profile</a>
-        </li>
-       
-      </ul>
 
-      <!-- Jumbo header-->
-    <div class="jumbotron jumbotron-fluid">
-      
-        <div class="container">
-          <h1 class="display-4">Faster remote job seeker</h1>
-          <h3>Do you want to work for a Startup?</h3>
-          <p class="lead">Search easily.</p>
-         
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Job Seeker">
+  <meta name="google" content="notranslate">
+  <meta name="rating" content="General">
+  <meta name="format-detection" content="telephone=no">
+  <title>Remote work seeker!!</title>
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body class="bg-light ">
+  <!-- navbar-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Remote Seeker</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Jumbo header-->
+  <div class="jumbotron jumbotron-fluid bg-primary text-white">
+
+    <div class="container">
+      <h1 class="display-4">Faster remote job seeker</h1>
+      <h3>Welcome to the best Job seeker ever, do you want to find a remote job in startups? Start now to search!!!</h3>
+      <p class="lead">Search easily.</p>
+
       <div class="container">
-        <form class="form-inline " onsubmit="return searchFor(this)">
+        <form class="" onsubmit="return searchFor(this)">
           <div class="form-group">
-          <input class="form-control mr-sm-2" type="search" id="searchfor" placeholder="Search for job title or company name here" aria-label="Search">
+            <input class="form-control w-50 " type="search" id="searchfor"
+              placeholder="Search for job title or company name here" aria-label="Search">
           </div>
           <div class="form-group">
-            <label class=" mr-sm-2" >Number of results</label>
-            <select class="form-control mr-sm-2" id="size">
+            <label class=" ">Number of results</label>
+            <select class="form-control  w-50" id="size">
               <option>10</option>
               <option>20</option>
               <option>30</option>
@@ -39,29 +57,57 @@
               <option>50</option>
             </select>
           </div>
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
         </form>
       </div>
+    </div>
+  </div>
+
+  <!-- Icons Grid -->
+  <section class="features-icons bg-light text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+            <img src="https://img.icons8.com/color/48/000000/company.png">
+            <h3>Best Startups</h3>
+            <p class="lead mb-0">You can find the best Startups</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+            <img src="https://img.icons8.com/ultraviolet/40/000000/globe.png">
+            <h3>Worldwide</h3>
+            <p class="lead mb-0">Starups around the globle!!</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+            <img src="https://img.icons8.com/color/48/000000/remote-desktop.png">
+            <h3>Remote work</h3>
+            <p class="lead mb-0">Only offers for work anywhere</p>
+          </div>
         </div>
       </div>
-
-
-       <!-- grid -->
-       <div class="container" >
-        <div class="row" id="jobs">      
-        </div>
+    </div>
+  </section>
+  <br />
+  <!-- grid -->
+  <section class="container ">
+    <div class="container text-center">
+      <h2>SEARCH RESULTS</h2>
+      <div class="row" id="jobs">
       </div>
+    </div>
+  </section>
 
-     
-      <footer>
-        <br>
-        <hr>
-      <div class="mx-auto px-8" style="width: 200px;">
-          Remote job seeker - 2020
-        </div>
+  <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+    <div class="container text-center">
+      <small> Remote job seeker - 2020</small>
+    </div>
+    <script src="./build/js/api.min.js"></script>
+  </footer>
 
-        <script src="./public/js/api.js"></script>
-    </footer>
-    
 </body>
+
 </html>

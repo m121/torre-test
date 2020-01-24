@@ -2,9 +2,17 @@
   "name": "torreexample",
   "version": "1.0.0",
   "description": "torre test",
-  "main": "index.js",
+  "main": "",
   "license": "MIT",
+  "author": "mateo Perez",
+  "scripts": {
+    "clean": "rimraf build/js/*",
+    "build:api": "uglifyjs src/public/js/api.js -m -c -o src/build/js/api.min.js"
+  },
   "dependencies": {
-    "bootstrap": "4.4.1"
+    "bootstrap": "4.4.1",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.0",
+    "uglify-es": "^3.3.9"
   }
 }

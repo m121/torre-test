@@ -27,7 +27,8 @@ function searchFor(){
 
   function addjobs(data,value){
     var card = data.map(function(element,index){
-      
+       
+        if(element.remote){
         if((element.organizations[0].name == value) || (element.objective == value)){
         let picture = element.organizations[0].picture != null ? element.organizations[0].picture : 'https://via.placeholder.com/300';
         let salary = element.compensation == null ?  'Private' : `<span>Min </span>${element.compensation.minAmount} - <span>Max </span>${element.compensation.maxAmount} ${element.compensation.currency}<span>/</span>${element.compensation.periodicity}`
@@ -57,7 +58,7 @@ function searchFor(){
             <div class='card' style='width: 18rem;'> 
             <img src='${picture}' class='card-img-top' alt='${element.organizations[0].name}'>
              <div class='card-body'>
-              <h5 class='card-title'><a href="job.html/?id=${element.id}">${element.objective}</a></h5>
+              <h5 class='card-title'><a href="https://torre.co/en/jobs/${element.id}">${element.objective}</a></h5>
               </div>
               <ul class="list-group list-group-flush">
               <li class="list-group-item"><strong>Company :</strong>${element.organizations[0].name}</li>
@@ -65,7 +66,7 @@ function searchFor(){
               <li class="list-group-item"><strong>Salary :</strong> ${salary}</li>
               </ul>
               <div class="card-body text-right">
-              <a href="job.html/?id=${element.id}" class="card-link">View details</a>
+              <a href="https://torre.co/en/jobs/${element.id}" class="card-link">Quick Apply</a>
             </div> 
         
      
@@ -73,8 +74,18 @@ function searchFor(){
         }else{
             return ('<div></div>');
         }
+
+    }
+    else{
+        return ('<div></div>');
+    }
     })
     
     document.getElementById('jobs').innerHTML = card;  
     
+  }
+
+
+  function jobinfo(){
+ 
   }
